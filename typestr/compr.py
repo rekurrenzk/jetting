@@ -81,3 +81,40 @@ str.rindex(sub[, start[,end]])
 '''
 
 
+def ret8():
+
+    print('|'.zfill(10))
+
+
+ret8()
+
+
+
+"""
+loops create var names persist existing after the loop completes.
+to deliminate the sideeffect of existing vars, use lambda.
+"""
+
+squares = list(map(lambda x: f"{x}. -> {x**2}", range(10)))
+print(squares)
+
+matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+]
+
+print(matrix) # row by row
+
+print([[row[i] for row in matrix] for i in range(4)]) # transposed
+
+
+def ret9():
+
+    transposed = []
+    for ijk in range(len(matrix)):
+        transposed.append([row[ijk] for row in matrix])
+    print(transposed)
+
+ret9()
+
